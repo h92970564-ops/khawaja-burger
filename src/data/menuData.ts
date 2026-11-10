@@ -1,4 +1,4 @@
-import { MenuItem, Outlet } from '../types';
+import { MenuItem, BranchLocation } from '../types';
 
 export const POPULAR_MENU_ITEMS: MenuItem[] = [
   {
@@ -138,57 +138,29 @@ export const FEATURES_DATA = [
   },
 ];
 
-export const OUTLETS_DATA: Outlet[] = [
-  {
-    city: 'Lahore',
-    area: 'Gulberg III',
-    address: 'Shop #4, MM Alam Road, Near Mini Market, Gulberg III, Lahore',
-    phone: '+92 42 3578 9911',
-    whatsapp: '923001234567',
-    timings: '12:00 PM – 02:00 AM Daily',
-    isDineIn: true,
-    isTakeaway: true,
-    isDelivery: true,
-  },
-  {
-    city: 'Karachi',
-    area: 'DHA Phase 5',
-    address: 'Plot 18-C, Khayaban-e-Shamsheer, DHA Phase 5, Karachi',
-    phone: '+92 21 3534 8822',
-    whatsapp: '923001234567',
-    timings: '01:00 PM – 03:00 AM Daily',
-    isDineIn: true,
-    isTakeaway: true,
-    isDelivery: true,
-  },
-  {
-    city: 'Islamabad',
-    area: 'F-7 Markaz',
-    address: 'Unit 9, Block B, Jinnah Super Market, F-7 Markaz, Islamabad',
-    phone: '+92 51 2654 3311',
-    whatsapp: '923001234567',
-    timings: '12:00 PM – 01:30 AM Daily',
-    isDineIn: true,
-    isTakeaway: true,
-    isDelivery: true,
-  },
-];
+export const SARGODHA_BRANCH: BranchLocation = {
+  branchName: 'KHAWAJA BURGER – Sargodha',
+  address: '17 Block, Sargodha, Pakistan',
+  phone: '03116007181',
+  whatsapp: 'https://wa.me/923116007181',
+  directionsUrl: 'https://www.google.com/maps/search/?api=1&query=17+Block,+Sargodha,+Pakistan',
+};
 
 export const REVIEWS_DATA = [
   {
     id: '1',
     name: 'Hamza Tariq',
     rating: 5,
-    city: 'Lahore',
+    city: '17 Block, Sargodha',
     date: 'Yesterday',
-    comment: 'The Khawaja Special Burger is genuinely unmatched in the city. The brioche was pillow-soft, the patties had the perfect crust, and the sauce drips everywhere in the best way possible!',
+    comment: 'The Khawaja Special Burger is genuinely unmatched. The brioche was pillow-soft, the patties had the perfect crust, and the sauce drips everywhere in the best way possible!',
     orderedItem: 'Khawaja Special Burger',
   },
   {
     id: '2',
     name: 'Ayesha Malik',
     rating: 5,
-    city: 'Karachi',
+    city: 'Sargodha',
     date: '3 days ago',
     comment: 'Their Zinger fillet is huge, super crunchy, and juicy right to the center. Arrived steaming hot via WhatsApp order in just 24 minutes. 10/10 recommend!',
     orderedItem: 'Zinger Burger + Loaded Fries',
@@ -197,9 +169,9 @@ export const REVIEWS_DATA = [
     id: '3',
     name: 'Bilal Khan',
     rating: 5,
-    city: 'Islamabad',
+    city: 'Sargodha',
     date: 'Last week',
-    comment: 'Finally a burger spot that takes beef quality seriously. Real cheddar, no weird processed taste, and the Loaded Fries are an absolute guilty pleasure.',
+    comment: 'Finally a burger spot in Sargodha that takes beef quality seriously. Real cheddar, no weird processed taste, and the Loaded Fries are an absolute guilty pleasure.',
     orderedItem: 'Double Patty Burger',
   },
 ];

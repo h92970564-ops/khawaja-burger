@@ -20,7 +20,7 @@ export const CheckoutModal: React.FC = () => {
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
-  const [city, setCity] = useState('Lahore');
+  const [city, setCity] = useState('Sargodha');
   const [paymentMethod, setPaymentMethod] = useState<'cod' | 'card' | 'bank'>('cod');
   const [notes, setNotes] = useState('');
   
@@ -198,7 +198,7 @@ export const CheckoutModal: React.FC = () => {
                       <input
                         type="tel"
                         required
-                        placeholder="0300 1234567"
+                        placeholder="03116007181"
                         value={phone}
                         onChange={e => setPhone(e.target.value)}
                         className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#121316] border border-white/10 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-amber-400 transition-colors"
@@ -208,17 +208,12 @@ export const CheckoutModal: React.FC = () => {
 
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-1.5">
-                      Select City *
+                      Delivery City *
                     </label>
-                    <select
-                      value={city}
-                      onChange={e => setCity(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#121316] border border-white/10 text-white text-sm focus:outline-none focus:border-amber-400 transition-colors"
-                    >
-                      <option value="Lahore">Lahore (Gulberg, DHA, Cantt, Johar Town)</option>
-                      <option value="Karachi">Karachi (DHA, Clifton, Gulshan, PECHS)</option>
-                      <option value="Islamabad">Islamabad (F-7, F-8, F-10, E-11, G-11)</option>
-                    </select>
+                    <div className="w-full px-3.5 py-2.5 rounded-xl bg-[#121316] border border-white/10 text-amber-400 font-bold text-sm flex items-center justify-between">
+                      <span>Sargodha</span>
+                      <span className="text-xs text-gray-400 font-normal">17 Block & Area</span>
+                    </div>
                   </div>
                 </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Logo } from './Logo';
-import { Phone, Mail, MapPin, Clock, ArrowUp } from 'lucide-react';
+import { Phone, Mail, MapPin, Navigation, MessageSquare, ArrowUp } from 'lucide-react';
+import { SARGODHA_BRANCH } from '../data/menuData';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -42,8 +43,8 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Col 2: Quick Menu Links (2 cols) */}
-          <div className="lg:col-span-2">
+          {/* Col 2: Quick Menu Links (3 cols) */}
+          <div className="lg:col-span-3">
             <h4 className="font-display font-bold text-white text-base tracking-wide uppercase mb-4">
               Our Menu
             </h4>
@@ -69,52 +70,73 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Col 3: Outlets & Hours (3 cols) */}
+          {/* Col 3: Branch Location (3 cols) - Single Branch Only */}
           <div className="lg:col-span-3">
             <h4 className="font-display font-bold text-white text-base tracking-wide uppercase mb-4">
-              Opening Hours
+              Branch Location
             </h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2.5">
-                <Clock className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                <div>
-                  <div className="text-white font-medium">Monday – Sunday</div>
-                  <div className="text-gray-400 text-xs">12:00 PM – 02:00 AM Daily</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-white font-medium">Flagship Locations</div>
-                  <div className="text-gray-400 text-xs">Lahore · Karachi · Islamabad</div>
+                  <div className="text-white font-medium">{SARGODHA_BRANCH.branchName}</div>
+                  <div className="text-gray-400 text-xs mt-0.5">{SARGODHA_BRANCH.address}</div>
                 </div>
+              </div>
+
+              <div className="pt-2">
+                <a
+                  href={SARGODHA_BRANCH.directionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 hover:text-amber-300 transition-colors"
+                >
+                  <Navigation className="w-3.5 h-3.5" />
+                  <span>Get Directions on Google Maps</span>
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Col 4: Contact & Hotline (3 cols) */}
-          <div className="lg:col-span-3">
+          {/* Col 4: Contact & Hotline (2 cols) */}
+          <div className="lg:col-span-2">
             <h4 className="font-display font-bold text-white text-base tracking-wide uppercase mb-4">
-              Order Hotline
+              Contact Us
             </h4>
             <div className="space-y-3 text-sm">
-              <a
-                href="tel:+923001234567"
-                className="flex items-center gap-2.5 text-gray-300 hover:text-amber-400 transition-colors"
-              >
-                <Phone className="w-4 h-4 text-amber-400 shrink-0" />
-                <span className="font-mono">+92 300 123 4567</span>
-              </a>
-              <a
-                href="mailto:orders@khawajaburger.pk"
-                className="flex items-center gap-2.5 text-gray-300 hover:text-amber-400 transition-colors"
-              >
-                <Mail className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>orders@khawajaburger.pk</span>
-              </a>
-              
-              <div className="mt-4 p-3 rounded-xl bg-amber-400/10 border border-amber-400/20 text-xs text-amber-300">
-                🚀 Free delivery available on orders above Rs. 1,500!
+              <div>
+                <span className="text-[11px] uppercase font-semibold text-gray-500 block">Phone</span>
+                <a
+                  href="tel:03116007181"
+                  className="flex items-center gap-2 text-gray-200 hover:text-amber-400 transition-colors mt-0.5"
+                >
+                  <Phone className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span className="font-mono font-bold">03116007181</span>
+                </a>
+              </div>
+
+              <div>
+                <span className="text-[11px] uppercase font-semibold text-gray-500 block">WhatsApp</span>
+                <a
+                  href="https://wa.me/923116007181"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors mt-0.5"
+                >
+                  <MessageSquare className="w-3.5 h-3.5 shrink-0" />
+                  <span className="font-mono font-bold">03116007181</span>
+                </a>
+              </div>
+
+              <div>
+                <span className="text-[11px] uppercase font-semibold text-gray-500 block">Email</span>
+                <a
+                  href="mailto:orders@khawajaburger.pk"
+                  className="flex items-center gap-2 text-gray-300 hover:text-amber-400 transition-colors mt-0.5 text-xs"
+                >
+                  <Mail className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span>orders@khawajaburger.pk</span>
+                </a>
               </div>
             </div>
           </div>
@@ -124,7 +146,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar: Copyright & Back to Top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
           <div>
-            © {new Date().getFullYear()} KHAWAJA BURGER. All rights reserved. 100% Halal Certified Fast Food.
+            © {new Date().getFullYear()} KHAWAJA BURGER – Sargodha. All rights reserved. 100% Halal Certified Fast Food.
           </div>
 
           <div className="flex items-center gap-6">

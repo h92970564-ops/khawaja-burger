@@ -37,14 +37,10 @@ export interface CartItem {
   totalPrice: number;
 }
 
-export interface Outlet {
-  city: string;
-  area: string;
+export interface BranchLocation {
+  branchName: string;
   address: string;
   phone: string;
   whatsapp: string;
-  timings: string;
-  isDineIn: boolean;
-  isTakeaway: boolean;
-  isDelivery: boolean;
+  directionsUrl: string;
 }

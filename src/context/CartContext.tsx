@@ -157,7 +157,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     city: string;
     notes?: string;
   }) => {
-    const phoneNumber = '923001234567'; // Khawaja Burger official WhatsApp hotline
+    const phoneNumber = '923116007181'; // Khawaja Burger official WhatsApp hotline
     let text = `🍔 *NEW ORDER — KHAWAJA BURGER*\n`;
     text += `━━━━━━━━━━━━━━━━━━━\n`;
     text += `👤 *Customer:* ${customerInfo.name}\n`;

@@ -89,7 +89,7 @@ export const StoryModal: React.FC = () => {
             <div className="pt-4 flex items-center justify-between border-t border-stone-300">
               <div className="flex items-center gap-2 text-xs text-stone-600">
                 <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-                <span>Crafted with love for burger fans across Pakistan</span>
+                <span>Crafted with love for burger fans in Sargodha</span>
               </div>
 
               <button
